@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  projectwebapi:
+    image: ${DOCKER_REGISTRY-}projectwebapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
