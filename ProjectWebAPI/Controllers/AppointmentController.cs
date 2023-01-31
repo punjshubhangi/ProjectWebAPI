@@ -88,6 +88,19 @@ namespace ProjectWebApi.Controllers
         [HttpPut("{AppointmentId}")]
         public ActionResult<bool> UpdateAppointment( Appointment appointment)
         {
+            //check doctorId exists
+            Doctor doc = doctorRepository.GetDoctorById(appointment.DoctorId);
+            if (doc == null)
+            {
+                return NotFound("Doctor not found");
+            }
+
+            //check time in 15s
+            int appMinutes = appointment.AppointmentDate.Minute;
+            if ((appMinutes % 15) != 0)
+            {
+                return Content("Invalid appointment time");
+            }
             IEnumerable<Appointment> getallapps = appointmentRepository.GetAllAppointments()
             .Where(app => app.AppointmentId.Equals(appointment.AppointmentId));
             int count = getallapps.Count();
