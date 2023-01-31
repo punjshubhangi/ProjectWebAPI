@@ -21,7 +21,7 @@ Use the following commands to use the Dockerfile (for MacOS)
 2. Use the following command to create an image -
     docker build -t <image_name> .
 3. Next we need to run the application in a container using:
-    docker run -dp <port number> <image_name>
+    docker run -dp <port_number> <image_name>
 
 4. Open the localhost in your broweser -
-  http://localhost:<port number>
+  http://localhost:<port_number>
