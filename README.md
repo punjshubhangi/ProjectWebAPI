@@ -1,4 +1,4 @@
-#Project to handle doctors appointments
+#Project- REST API to manage Doctors Appointments
 
 REST API project built on .NET 7 using C# and Docker.
 Data is kept in memory.
