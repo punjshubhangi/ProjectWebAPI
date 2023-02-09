@@ -13,15 +13,3 @@ To Test APIs hit following endpoints on Swagger/Postman-
 5. PUT localhost:<port>/appointments/{appointmentId} 
   
   
-To build -
-  
-The project contains a DockerFile.
-Use the following commands to use the Dockerfile (for MacOS)
-1. Open Terminal and navigate to the project folder that contains the file named Dockerfile.
-2. Use the following command to create an image -
-    docker build -t <image_name> .
-3. Next we need to run the application in a container using:
-    docker run -dp <port_number> <image_name>
-
-4. Open the localhost in your broweser -
-  http://localhost:<port_number>
